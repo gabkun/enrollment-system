@@ -1,0 +1,43 @@
+﻿<Window x:Class="prototype.sbit"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:prototype"
+        mc:Ignorable="d"
+        Title="sbit" Height="450" Width="800">
+    <Grid>
+        <Grid.Background>
+            <RadialGradientBrush>
+                <GradientStop Color="White"/>
+                <GradientStop Color="#FF0432DD" Offset="0.873"/>
+            </RadialGradientBrush>
+        </Grid.Background>
+        <Label Content="School of Business &amp; Information Technology (SBIT)" FontFamily="Copperplate Gothic Bold" FontSize="19" Foreground="#FFFDF942" Margin="0,10,0,0" Height="54" VerticalAlignment="Top"/>
+        <ListBox x:Name = "listbox" Margin = "10,47,374,145" Background="{x:Null}" FontFamily="Ebrima" FontSize="18">
+            <ListBoxItem Content = "Bachelor of Science in Business Administration" Foreground="White" />
+            <ListBoxItem Content = "Human Resource Management" Foreground="White" />
+            <ListBoxItem Content = "Marketing Management" Foreground="White" />
+            <ListBoxItem Content = "Bachelor of Science in Information Technology" Foreground="White" />
+            <ListBoxItem Content = "Bachelor of Library and Information Science" Foreground="White" />
+         
+        </ListBox>
+        <TextBox Height = "30" x:Name = "textBox1" Width = "308" Margin = "454,144,0,0"  
+            HorizontalAlignment = "Left" VerticalAlignment = "Top"  
+            Text="{Binding SelectedItem.Content, ElementName=listbox}" FontFamily="Ebrima" FontSize="14" SelectionBrush="White" />
+        <Label Content="SELECTED PROGRAM:" HorizontalAlignment="Left" Margin="454,115,0,0" VerticalAlignment="Top" Foreground="White" Width="245" FontFamily="Ebrima" FontSize="14" FontWeight="Bold"/>
+        <Button x:Name="Button22" Content="ADMISSION REQUIREMENTS" HorizontalAlignment="Left" Margin="572,281,0,0" VerticalAlignment="Top" Height="31" Width="190" Background="#FF78A6C4" Foreground="White" Click="Button22_Click" FontFamily="Ebrima"/>
+        <Button x:Name="Button5_Copy" Content="GO BACK" HorizontalAlignment="Left" Margin="572,334,0,0" VerticalAlignment="Top" Height="31" Width="190" Background="#FF78A6C4" Foreground="White" Click="Button_Click" FontFamily="Ebrima"/>
+        <Image Margin="-2,294,649,11" Source="/cropped-logo.png" RenderTransformOrigin="0.5,0.5">
+            <Image.RenderTransform>
+                <TransformGroup>
+                    <ScaleTransform/>
+                    <SkewTransform/>
+                    <RotateTransform Angle="0"/>
+                    <TranslateTransform/>
+                </TransformGroup>
+            </Image.RenderTransform>
+        </Image>
+
+    </Grid>
+</Window>
